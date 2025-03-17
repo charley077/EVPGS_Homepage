@@ -121,16 +121,11 @@ body {
   border-radius: 10px;
   padding: 0;
   font-size: 0;
-
-  min-height: 300px; /* 确保 item 至少有 300px 高度 */
-  display: flex; /* 让视频可以撑起高度 */
-  justify-content: center;
-  align-items: center;
 }
 
 .results-carousel video {
   margin: 0;
-  max-height: 500px; /* 避免视频太大 */
+  max-height: 100px; /* 避免视频太大 */
   width: auto; /* 让视频按比例缩放 */
   display: block; /* 确保视频是可见的 */
 }
