@@ -130,6 +130,9 @@ body {
 
 .results-carousel video {
   margin: 0;
+  max-height: 500px; /* 避免视频太大 */
+  width: auto; /* 让视频按比例缩放 */
+  display: block; /* 确保视频是可见的 */
 }
 
 
