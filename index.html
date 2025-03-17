@@ -186,10 +186,19 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We present the first method capable of photorealistically reconstructing a non-rigidly
-            deforming scene using photos/videos captured casually from mobile phones.
+            Gaussian Splatting (GS)-based methods rely on sufficient training view coverage and perform synthesis on interpolated views. 
+            In this work, we tackle the more challenging and underexplored Extrapolated View Synthesis (EVS) task. 
+            Here we enable GS-based models trained with limited view coverage to generalize well to extrapolated views. 
+            To achieve our goal, we propose a view augmentation framework to guide training through a coarse-to-fine process. 
+            At the coarse stage, we reduce rendering artifacts due to insufficient view coverage by introducing a regularization strategy at both appearance and geometry levels. 
+            At the fine stage, we generate reliable view priors to provide further training guidance. 
+            To this end, we incorporate an occlusion awareness into the view prior generation process, and refine the view priors with the aid of coarse stage output. 
+            We call our framework Enhanced View Prior Guidance for Splatting (EVPGS). 
+            To comprehensively evaluate EVPGS on the EVS task, we collect a real-world dataset called Merchandise3D dedicated to the EVS scenario. 
+            Experiments on three datasets including both real and synthetic demonstrate EVPGS achieves state-of-the-art performance, 
+            while improving synthesis quality at extrapolated views for GS-based methods both qualitatively and quantitatively. 
           </p>
-          <p>
+          <!-- <p>
             Our approach augments neural radiance fields
             (NeRF) by optimizing an
             additional continuous volumetric deformation field that warps each observed point into a
@@ -211,14 +220,14 @@
             images of the same pose at different viewpoints. We show that our method faithfully
             reconstructs non-rigidly deforming scenes and reproduces unseen views with high
             fidelity.
-          </p>
+          </p> -->
         </div>
       </div>
     </div>
     <!--/ Abstract. -->
 
     <!-- Paper video. -->
-    <div class="columns is-centered has-text-centered">
+    <!-- <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Video</h2>
         <div class="publication-video">
@@ -226,7 +235,7 @@
                   frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
       </div>
-    </div>
+    </div> -->
     <!--/ Paper video. -->
   </div>
 </section>
