@@ -235,24 +235,29 @@
     </div>
 
     <div class="columns is-vcentered">
-      <!-- 最左侧视频 -->
-      <div class="column is-one-third has-text-centered">
-        <video id="left-video" autoplay controls muted loop playsinline>
-          <source src="./static/videos/bottle.mp4" type="video/mp4">
-        </video>
-      </div>
+        <!-- 最左侧视频，占 1/4 -->
+        <div class="column is-one-quarter has-text-centered">
+          <video id="left-video" autoplay controls muted loop playsinline>
+              <source src="./static/videos/bottle.mp4" type="video/mp4">
+          </video>
+        </div>
 
-      <!-- 左侧图片 -->
-      <div class="column is-one-third has-text-centered">
-        <img src="./static/images/bottle_camera.png" alt="Sample Image">
-      </div>
-
-      <!-- 右侧视频 -->
-      <div class="column is-one-third has-text-centered">
-        <video id="dollyzoom" autoplay controls muted loop playsinline>
-          <source src="./static/videos/bottle_nike2.mp4" type="video/mp4">
-        </video>
-      </div>
+        <!-- 图片和右侧视频合计占 3/4 -->
+        <div class="column is-three-quarters">
+            <div class="columns is-vcentered">
+                <!-- 左侧图片，占 1/2 -->
+                <div class="column has-text-centered">
+                    <img src="./static/images/bottle_camera.png" alt="Sample Image">
+                </div>
+                
+                <!-- 右侧视频，占 1/2 -->
+                <div class="column has-text-centered">
+                    <video id="dollyzoom" autoplay controls muted loop playsinline>
+                        <source src="./static/videos/bottle_nike2.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div class="columns is-vcentered">
