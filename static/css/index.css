@@ -36,6 +36,8 @@ body {
 
 }
 
+
+
 .publication-banner video {
   position: relative;
   left: auto;
@@ -112,6 +114,7 @@ body {
 
 .results-carousel {
   overflow: hidden;
+
 }
 
 .results-carousel .item {
@@ -324,4 +327,13 @@ body {
   position: absolute;
   left: 50%;
   margin-left: -1.5px;
+}
+
+.section {
+  width: 100%;
+}
+
+
+.title.is-3{
+  color: #4CAF50;
 }
