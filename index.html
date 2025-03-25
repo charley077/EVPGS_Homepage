@@ -292,35 +292,29 @@
     </div>
   </section>
 
-
   <section class="section">
     <div class="container is-max-desktop">
-      <!-- Concurrent Work. -->
+      <!-- Framework Pipeline -->
       <div class="columns is-centered has-text-centered">
         <div class="column is-full-width">
-          <h2 class="title is-3">Method Overview</h2>
-          <div class="content has-text-justified">
-            <img src="./static/images/arc_v2.png">
-            <!-- <img src="./static/images/arc.png"> -->
-
-            <p>
-              <strong>Overall Framework</strong>. InstantSplat synergizes the geometry priors from the pre-trained MASt3R model and utilizes Gaussian Splatting to jointly optimize camera parameters and the 3D scenes.
-            </p>
-            <!-- <p><strong>Overall Framework of InstantSplat</strong>. Beginning with sparse, unposed images, we generate a pixel-wise multi-view stereo dense point cloud utilizing
-              an off-the-shelf model along with computed initial camera poses. We conduct Adaptive Dense Surface Initialization employing a voxel-wise, confidence-aware
-              point downsampler to minimize redundancy and achieve uniform sampling. A streamlined Joint Optimization process without ADC is then implemented to
-              adjust the Gaussian and camera parameters, ensuring consistency across multi-view images. All these processes are executed in a matter of seconds.</p> -->
-
-          </div>
+          <h2 class="title is-3">Framework Pipeline</h2>
+          <img src="./static/images/pipeline.png">
+          <p>
+            <strong>Overall Framework</strong>. Framework Overview. EVPGS first pre-trains a GS model using the training set with limited view coverage (e.g., horizontal views) and 
+            then fine-tunes it on augmented views (e.g., elevated views) via a coarse-to-fine process. 
+            At the coarse stage, our Appearance and Geometry Regularization (AGR) strategy reduces artifacts in augmented views 
+            using the Denoising Diffusion Model and the reconstructed mesh from the pre-trained model. 
+            At the fine stage, our Occlusion-Aware Reprojection and Refinement (OARR) strategy generates 
+            <strong>Enhanced View Priors</strong> as pseudo-labels, addressing occlusions and incorporating view-dependent colors from the coarse stage.
+          </p>
         </div>
       </div>
-      <!--/ Concurrent Work. -->
-
+      <!--/ Framework Pipeline -->
     </div>
   </section>
 
   
-  <section class="section">
+  <!-- <section class="section">
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
         <div class="column is-full-width">
@@ -329,65 +323,10 @@
             <img src="./static/images/teaser_v5.png">
             <p><strong>InstantSplat</strong> rapidly reconstructs a dense 3D model from sparse-view images. Instead of relying on traditional Structure-from-Motion poses and the complex adaptive density control strategy of 3D-GS, which is fragile under sparse-view conditions, we propose to synergize the geometric foundation model (i.e., MASt3R) for dense yet less accurate initialization along with a fast alignment step to jointly optimize camera poses and the 3D scenes. It supports various 3D representations, including <strong>2D-GS</strong>, <strong>3D-GS</strong>, and <strong>Mip-Splatting</strong>.</p>
           </div>
-          <!-- <div class="content has-text-justified">
-            <img src="./static/images/cfgs_vs_ours.png">
-            <p>We study the impact of the training view number to the rendering quality. Comparisons are between our
-              model and CF-3DGS, on the Tanks and Temples dataset</p>
-          </div> -->
         </div>
       </div>
     </div>
-  </section>
-
-  <section class="section">
-    <div class="container is-max-desktop">
-      <!-- Concurrent Work. -->
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-full-width">
-          <h2 class="title is-3">Free-view rendering results on in-the-wild data</h2>
-          <div class="content has-text-justified">
-            <div class="column is-four-fifths"></div>
-              <div class="has-text-centered">
-                <!-- <h2 class="title is-3">Additional Free-view Rendering</h2> -->
-                <!-- TODO replace the place holder video with the correct video and delete the plaveholder video from folder -->
-                <video controls autoplay muted loop>
-                  <source src="static/videos/demo1_concat.mp4" type="video/mp4">
-                </video>
-                <video controls autoplay muted loop>
-                  <source src="static/videos/demo2_concat.mp4" type="video/mp4">
-                </video>
-                <video controls autoplay muted loop>
-                  <source src="static/videos/demo3_concat.mp4" type="video/mp4">
-                </video>
-                
-
-                <video controls autoplay muted loop>
-                  <source src="static/videos/demo5_concat.mp4" type="video/mp4">
-                </video>
-                <video controls autoplay muted loop>
-                  <source src="static/videos/demo6_concat.mp4" type="video/mp4">
-                </video>
-                <video controls autoplay muted loop>
-                  <source src="static/videos/demo7_concat.mp4" type="video/mp4">
-                </video>
-                <video controls autoplay muted loop>
-                  <source src="static/videos/demo4_concat.mp4" type="video/mp4">
-                </video>
-                
-              </div>
-          </div>
-
-          </div>
-        </div>
-      </div>
-      <!--/ Concurrent Work. -->
-
-    </div>
-  </section>
-
-
-
-
+  </section> -->
 
 
   <section class="section">
@@ -409,17 +348,17 @@
                   <div id="example1" class="bal-container-small">
 
                     <div class="bal-after">
-                      <img src="./static/images/comparison_n/Ballroom/ours_depth.png">
+                      <img src="./static/images/Merchandise3D/toothpaste_ours.png">
                       <div class="bal-afterPosition afterLabel" style="z-index:1;">
-                        2D-GS + Ours
+                        EVPGS(RaDe-GS)
                       </div>
                     </div>
 
                     <div class="bal-before" style="width:96.4968152866242%;">
                       <div class="bal-before-inset" style="width: 512px;">
-                        <img src="./static/images/comparison_n/Ballroom/2dgs_depth.png">
+                        <img src="./static/images/Merchandise3D/toothpaste_base.png">
                         <div class="bal-beforePosition beforeLabel">
-                          2D-GS [Huang 2024]
+                          RaDe-GS [Zhang 2024]
                         </div>
                       </div>
                     </div>
@@ -434,17 +373,17 @@
                   <div id="example2" class="bal-container-small">
 
                     <div class="bal-after">
-                      <img src="./static/images/comparison_n/Church/ours_depth.png">
+                      <img src="./static/images/Merchandise3D/hazulnut_ours.png">
                       <div class="bal-afterPosition afterLabel" style="z-index:1;">
-                        2D-GS + Ours
+                        EVPGS(RaDe-GS)
                       </div>
                     </div>
 
                     <div class="bal-before" style="width:96.4968152866242%;">
                       <div class="bal-before-inset" style="width: 512px;">
-                        <img src="./static/images/comparison_n/Church/2dgs_depth.png">
+                        <img src="./static/images/Merchandise3D/hazulnut_base.png">
                         <div class="bal-beforePosition beforeLabel">
-                          2D-GS [Huang 2024]
+                          RaDe-GS [Zhang 2024]
                         </div>
                       </div>
                     </div>
