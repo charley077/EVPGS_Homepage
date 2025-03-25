@@ -287,14 +287,17 @@
         <div class="column is-full-width">
           <h2 class="title is-3">Framework Pipeline</h2>
           <img src="./static/images/pipeline.png">
-          <p>
-            <strong>Overall Framework</strong>. EVPGS first pre-trains a GS model using the training set with limited view coverage (e.g., horizontal views) and 
-            then fine-tunes it on augmented views (e.g., elevated views) via a coarse-to-fine process. 
-            At the coarse stage, our Appearance and Geometry Regularization (AGR) strategy reduces artifacts in augmented views 
-            using the Denoising Diffusion Model and the reconstructed mesh from the pre-trained model. 
-            At the fine stage, our Occlusion-Aware Reprojection and Refinement (OARR) strategy generates 
-            <strong>Enhanced View Priors</strong> as pseudo-labels, addressing occlusions and incorporating view-dependent colors from the coarse stage.
-          </p>
+          <div class="content has-text-justified">
+            <p>
+              <strong>Overall Framework</strong>. EVPGS first pre-trains a GS model using the training set with limited view coverage (e.g., horizontal views) and 
+              then fine-tunes it on augmented views (e.g., elevated views) via a coarse-to-fine process. 
+              At the coarse stage, our Appearance and Geometry Regularization (AGR) strategy reduces artifacts in augmented views 
+              using the Denoising Diffusion Model and the reconstructed mesh from the pre-trained model. 
+              At the fine stage, our Occlusion-Aware Reprojection and Refinement (OARR) strategy generates 
+              <strong>Enhanced View Priors</strong> as pseudo-labels, addressing occlusions and incorporating view-dependent colors from the coarse stage.
+            </p>
+          </div>
+          
         </div>
       </div>
       <!--/ Framework Pipeline -->
