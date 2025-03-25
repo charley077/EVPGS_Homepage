@@ -218,7 +218,16 @@
   </section>
     
 
-
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <img src="./static/images/teaser.png">
+        <h2 class="subtitle has-text-centered">
+          EVPGS is a GS-based framework for Extrapolated View Synthesis (EVS) that uses coarse-to-fine view augmentation strategy to synthesize extrapolated views with limited training view coverage.
+        </h2>
+      </div>
+    </div>
+  </section>
 
 
 
@@ -227,43 +236,60 @@
       <!-- Abstract. -->
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
-          <h2 class="title is-3">Overview</h2>
+          <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
-
+            <p>
+              Gaussian Splatting (GS)-based methods rely on sufficient training view coverage and perform synthesis on interpolated views. 
+              In this work, we tackle the more challenging and underexplored Extrapolated View Synthesis (EVS) task. 
+              Here we enable GS-based models trained with limited view coverage to generalize well to extrapolated views. 
+              To achieve our goal, we propose a view augmentation framework to guide training through a coarse-to-fine process. 
+              At the coarse stage, we reduce rendering artifacts due to insufficient view coverage by introducing a regularization strategy at both appearance and geometry levels. 
+              At the fine stage, we generate reliable view priors to provide further training guidance. 
+              To this end, we incorporate an occlusion awareness into the view prior generation process, and refine the view priors with the aid of coarse stage output. 
+              We call our framework Enhanced View Prior Guidance for Splatting (EVPGS). 
+              To comprehensively evaluate EVPGS on the EVS task, we collect a real-world dataset called Merchandise3D dedicated to the EVS scenario. 
+              Experiments on three datasets including both real and synthetic demonstrate EVPGS achieves state-of-the-art performance, 
+              while improving synthesis quality at extrapolated views for GS-based methods both qualitatively and quantitatively. 
+            </p>
             <!-- <p>
-              While novel view synthesis (NVS) from a sparse set of images has made substantial progress in 3D computer vision, it requires an accurate initial estimation of camera parameters using Structure-from-Motion (SfM). However, SfM processes are time-consuming and prove unreliable in sparse-view scenarios where matched features are scarce. Moreover, the recent  point-based representation (3D Gaussian Splatting or 3D-GS) is substantially dependent on the precision of SfM outcomes, leading to significant accumulated errors and limited generalization capability across varied datasets. In this study, we introduce a novel and streamlined framework to enhance robust NVS from sparse-view images.
+              Our approach augments neural radiance fields
+              (NeRF) by optimizing an
+              additional continuous volumetric deformation field that warps each observed point into a
+              canonical 5D NeRF.
+              We observe that these NeRF-like deformation fields are prone to local minima, and
+              propose a coarse-to-fine optimization method for coordinate-based models that allows for
+              more robust optimization.
+              By adapting principles from geometry processing and physical simulation to NeRF-like
+              models, we propose an elastic regularization of the deformation field that further
+              improves robustness.
             </p>
             <p>
-              Our framework, <strong>InstantSplat</strong>, integrates dense stereo predictions with point-based representations to construct 3D Gaussians of large-scale scenes from sparse-view data within seconds. Specifically, InstantSplat generates densely populated surface points across all training views and determines the initial camera parameters using pixel-aligned points. Nonetheless, the non-uniform distribution of initial points from all pixels results in an excessive number of Gaussians,  ielding a sub-optimal scene representation that compromises rendering speed and quality. To address this issue, we employ a highly efficient grid-based, confidence-aware Farthest Point Sampling to strategically position point primitives at representative locations in parallel. Having the uniformly sampled surface points, we can initialize densely covered Gaussians and adopt a streamlined optimization framework to adapt the camera parameters and attributes of 3D Gaussians efficiently, instead of utilizing the complex Adaptive Density Control with manually tuned hyperparameters in 3D-GS. InstantSplat achieves a substantial reduction in training time, from <u></u>hours to mere seconds</u>, and demonstrates robust performance across various numbers of views in diverse datasets.
+              We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
+              photos/videos into deformable NeRF
+              models that allow for photorealistic renderings of the subject from arbitrary
+              viewpoints, which we dub <i>"nerfies"</i>. We evaluate our method by collecting data
+              using a
+              rig with two mobile phones that take time-synchronized photos, yielding train/validation
+              images of the same pose at different viewpoints. We show that our method faithfully
+              reconstructs non-rigidly deforming scenes and reproduces unseen views with high
+              fidelity.
             </p> -->
-            <p>
-              While neural 3D reconstruction has advanced substantially, its performance significantly degrades with sparse-view data, which limits its broader applicability, since SfM is often unreliable in sparse-view scenarios where feature matches are scarce.
-              In this paper, we introduce <strong>InstantSplat</strong>, a novel approach for addressing sparse-view 3D scene reconstruction at lightning-fast speed. InstantSplat employs a self-supervised framework that optimizes 3D scene representation and camera poses by unprojecting 2D pixels into 3D space and aligning them using differentiable neural rendering. The optimization process is initialized with a large-scale trained geometric foundation model, which provides dense priors that yield initial points through model inference, after which we further optimize all scene parameters using photometric errors.
-              To mitigate redundancy introduced by the prior model, we propose a co-visibility-based geometry initialization, and a Gaussian-based bundle adjustment is employed to rapidly adapt both the scene representation and camera parameters without relying on a complex adaptive density control process.
-              Overall, InstantSplat is compatible with multiple point-based representations for view synthesis and surface reconstruction. It achieves an acceleration of over 30 times in reconstruction and improves visual quality (SSIM) from 0.3755 to 0.7624 compared to traditional SfM with 3D-GS.
-            </p>
-
-
           </div>
         </div>
       </div>
       <!--/ Abstract. -->
-      <div class="column is-four-fifths"></div>
-      <div class="has-text-centered">
-        <h2 class="title is-3">Video</h2>
-        <!-- TODO replace the place holder video with the correct video and delete the plaveholder video from folder -->
-        <video controls>
-          <source src="static/videos/demo1.mp4" type="video/mp4">
-          <!-- <source src="static/videos/InstantSplat.mp4" type="video/mp4"> -->
-          Your browser does not support the video.
-        </video>
-        <!-- The following is the way to insert through link -->
-        <!-- <div class="publication-video">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/470hul75bSM?si=7F9NL8zWbU9GtqHb"
-            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
-         encrypted-media; " allowfullscreen></iframe> -->
-      </div>
-    </div>
+  
+      <!-- Paper video. -->
+      <!-- <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Video</h2>
+          <div class="publication-video">
+            <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
+                    frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div> -->
+      <!--/ Paper video. -->
     </div>
   </section>
 
