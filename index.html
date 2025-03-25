@@ -131,6 +131,18 @@
   </section>
 
 
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <img src="./static/images/teaser.png">
+        <h2 class="subtitle has-text-centered">
+          EVPGS is a GS-based framework for Extrapolated View Synthesis (EVS) that uses coarse-to-fine view augmentation strategy to synthesize extrapolated views with limited training view coverage.
+        </h2>
+      </div>
+    </div>
+  </section>
+
+
   
 
   <section class="hero is-light is-small">
@@ -212,18 +224,6 @@
           </div>
         </div>
         <p>The results shown are derived from <strong>3 training views</strong>. Our method estimates poses, which are then interpolated to render the video.</p>
-      </div>
-    </div>
-  </section>
-    
-
-  <section class="hero teaser">
-    <div class="container is-max-desktop">
-      <div class="hero-body">
-        <img src="./static/images/teaser.png">
-        <p>
-          EVPGS is a GS-based framework for Extrapolated View Synthesis (EVS) that uses coarse-to-fine view augmentation strategy to synthesize extrapolated views with limited training view coverage.
-        </p>
       </div>
     </div>
   </section>
@@ -398,17 +398,17 @@
                   <div id="example3" class="bal-container-small">
 
                     <div class="bal-after">
-                      <img src="./static/images/comparison_n/Family/family_00006.png">
+                      <img src="./static/images/Synthetic/hotdog_ours.png">
                       <div class="bal-afterPosition afterLabel" style="z-index:1;">
-                        Ours
+                        EVPGS(2DGS)
                       </div>
                     </div>
 
                     <div class="bal-before" style="width:96.4968152866242%;">
                       <div class="bal-before-inset" style="width: 512px;">
-                        <img src="./static/images/comparison_n/Family/0006_cf.png">
+                        <img src="./static/images/Synthetic/hotdog_2dgs.png">
                         <div class="bal-beforePosition beforeLabel">
-                          CF-3DGS [Fu 2023]
+                          2DGS [Huang 2024]
                         </div>
                       </div>
                     </div>
@@ -424,17 +424,17 @@
                   <div id="example4" class="bal-container-small">
 
                     <div class="bal-after">
-                      <img src="./static/images/comparison_n/Francis/francis_00000.png">
+                      <img src="./static/images/DTU/00007_ours.png">
                       <div class="bal-afterPosition afterLabel">
-                        Ours
+                        EVPGS(2DGS)
                       </div>
                     </div>
 
                     <div class="bal-before" style="width: 50%;">
                       <div class="bal-before-inset" style="width: 512px;">
-                        <img src="./static/images/comparison_n/Francis/nope_0000_francis.png">
+                        <img src="./static/images/DTU/00007_2dgs.png">
                         <div class="bal-beforePosition beforeLabel">
-                          Nope-NeRF [Bian 2022]
+                          2DGS [Huang 2024]
                         </div>
                       </div>
                     </div>
@@ -447,17 +447,41 @@
                   <div id="example5" class="bal-container-small">
 
                     <div class="bal-after">
-                      <img src="./static/images/comparison_n/Bicycle/bicycle_00005.png">
+                      <img src="./static/images/Synthetic/chair_ours.png">
                       <div class="bal-afterPosition afterLabel">
-                        Ours
+                        EVPGS(Mip-Splatting)
                       </div>
                     </div>
 
                     <div class="bal-before" style="width: 50%;">
                       <div class="bal-before-inset" style="width: 512px;">
-                        <img src="./static/images/comparison_n/Bicycle/0005_nerfmm.png">
+                        <img src="./static/images/Synthetic/chair_mip.png">
                         <div class="bal-beforePosition beforeLabel">
-                          NeRFmm [Wang 2021]
+                          Mip-Splatting [Yu 2023]
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="bal-handle" style="left: 50%;">
+                      <span class=" handle-left-arrow"></span>
+                      <span class="handle-right-arrow"></span>
+                    </div>
+                  </div>
+
+                  <div id="example6" class="bal-container-small">
+
+                    <div class="bal-after">
+                      <img src="./static/images/DTU/00007_mipours.png">
+                      <div class="bal-afterPosition afterLabel">
+                        EVPGS(Mip-Splatting)
+                      </div>
+                    </div>
+
+                    <div class="bal-before" style="width: 50%;">
+                      <div class="bal-before-inset" style="width: 512px;">
+                        <img src="./static/images/DTU/00007_ours.png">
+                        <div class="bal-beforePosition beforeLabel">
+                          Mip-Splatting [Yu 2023]
                         </div>
                       </div>
                     </div>
